@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Monoton&family=Rubik+Glitch&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Rubik+Dirt&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap" rel="stylesheet">
+
+    <title>Linear Emergency</title>
+
+</head>
+<body>
+
+<div class="hero">
+
+    <!-- <div class="header"></div> -->
+
+    <nav>
+ 
+            <li><a href="homepage.html">Home</a></li>
+            <li><a href="index.html">Open Work Orders</a></li>
+             <li><a href="z-closedWorkOrders.html">Closed Work Orders</a></li>
+
+    </nav>
+
+
+
+</div>
+
+
+    <main>
+         
+            <h1>Open Work Orders</h1>
+            <section id="workOrderDisplay"></section>
+
+            <section id="suggestionBox">
+                <h3>Add a work order</h3>
+                <input id="nameInput" placeholder="First and Last Name"/>
+                <input id="addressInput" placeholder="Address"/>
+                <input id="phoneInput" placeholder="Phone Number"/>
+                <textarea id="freeform" name="freeform" rows="6" cols="50" placeholder="What is going on with your system?"></textarea>
+                <button id="addWorkOrder">Submit</button>
+            </section>
+
+
+    </main>
+
+          
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src ="./index.js"></script>
+
+</body>
+</html>
