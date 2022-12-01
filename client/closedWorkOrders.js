@@ -14,8 +14,12 @@ const createWorkOrders = (workOrder) => {
     createNewWorkOrder.classList.add('new-workorder')
 
     createNewWorkOrder.innerHTML = ` 
-    <p>${workOrder.name}</p>
-    <p>${workOrder.address}</p>
+    <p>${workOrder.firstName}</p>
+    <p>${workOrder.lastName}</p>
+    <p>${workOrder.streetAddress}</p>
+    <p>${workOrder.city}</p>
+    <p>${workOrder.state}</p>
+    <p>${workOrder.zipcode}</p>
     <p>${workOrder.phoneNumber}</p>
     <p>${workOrder.issue}</p>
 

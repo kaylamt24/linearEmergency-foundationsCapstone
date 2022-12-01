@@ -11,16 +11,19 @@ module.exports = {
     },
 
     addWorkOrder: (req, res) => {
-    const {name, address, phoneNumber, issue} = req.body
+    const {firstName, lastName, streetAddress, city, state, zipcode, phoneNumber, issue} = req.body
         
     const newWorkOrder = {
         id: globalId,
-        name: name,
-        address: address,
+        firstName: firstName,
+        lastName: lastName,
+        streetAddress: streetAddress,
+        city: city,
+        state: state,
+        zipcode: zipcode,
         phoneNumber: phoneNumber,
         issue: issue,
         open: true
-    
     }
     workOrders.push(newWorkOrder)
 
@@ -37,17 +40,7 @@ module.exports = {
         workOrders[index]["open"] = false
 
         res.status(200).send(workOrders)
-    },
-
-    // closedWorkOrder: (req, res) => {
-    //     // const index = deleteWorkOrder.findIndex((el) => el.id === +req.params.id)
-    //     // console.log(closedWorkOrders)
-    //     closed.push(deleteWorkOrder)
-    //     console.log(closed)
-
-    //     res.status(200).send(deleteWorkOrder)
-
-    // }
+    }
 
   
 }

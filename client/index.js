@@ -14,16 +14,19 @@ const createWorkOrders = (workOrder) => {
     createNewWorkOrder.classList.add('new-workorder')
 
     createNewWorkOrder.innerHTML = ` 
-    <p>${workOrder.name}</p>
-    <p>${workOrder.address}</p>
+    <p>${workOrder.firstName}</p>
+    <p>${workOrder.lastName}</p>
+    <p>${workOrder.streetAddress}</p>
+    <p>${workOrder.city}</p>
+    <p>${workOrder.state}</p>
+    <p>${workOrder.zipcode}</p>
     <p>${workOrder.phoneNumber}</p>
     <p>${workOrder.issue}</p>
 
     <section>
     <select name ="options" id="status">
-    <option value ="change">Update Status</option>
-    <option value ="closed">Completed Work Order</option>
-    <option value ="delete">Delete Work Order</option>
+    <option value ="change">Open Work Order</option>
+    <option value ="closed">Work Order Completed</option>
     </select>
     </section>
     <button onclick="deleteWorkOrder(${workOrder.id})">Submit</button>
@@ -59,14 +62,22 @@ const addNewWorkOrder = () => {
 
     displayExistingReq.innerHTML = ''
 
-    const name = document.querySelector('#nameInput')
-    const address = document.querySelector('#addressInput')
+    const firstName = document.querySelector('#firstNameInput')
+    const lastName = document.querySelector('#lastNameInput')
+    const streetAddress = document.querySelector('#streetAddressInput')
+    const city = document.querySelector('#cityInput')
+    const state = document.querySelector('#stateInput')
+    const zipcode = document.querySelector('#zipcodeInput')
     const phoneNumber = document.querySelector('#phoneInput')
     const issue = document.querySelector('#freeform')
 
     let bodyObj = {
-        name: name.value,
-        address: address.value,
+        firstName: firstName.value,
+        lastName: lastName.value,
+        streetAddress: streetAddress.value,
+        city: city.value,
+        state: state.value,
+        zipcode: zipcode.value,
         phoneNumber: phoneNumber.value,
         issue: issue.value,
         open: true
@@ -78,11 +89,15 @@ const addNewWorkOrder = () => {
 
     .then((res) => {
         
-    name.value = ''
-    address.value = ''
-    phoneNumber.value = ''
-    issue.value = ''
-    
+        firstName.value = ''
+        lastName.value = ''
+        streetAddress.value = ''
+        city.value = ''
+        state.value = ''
+        zipcode.value = ''
+        phoneNumber.value = ''
+        issue.value = ''
+
 
         displayAllWorkOrders(res.data)
     })
