@@ -35,7 +35,10 @@ const createWorkOrders = (workOrder) => {
 const displayAllWorkOrders = (arr) => {
     for(let i = 0; i < arr.length; i++){
         // console.log(arr[i])
-        createWorkOrders(arr[i])
+        if (arr[i].open){
+            createWorkOrders(arr[i])
+        }
+        // createWorkOrders(arr[i])
     }
 }
 
@@ -65,7 +68,8 @@ const addNewWorkOrder = () => {
         name: name.value,
         address: address.value,
         phoneNumber: phoneNumber.value,
-        issue: issue.value
+        issue: issue.value,
+        open: true
     }
 
     console.log(bodyObj)
@@ -78,6 +82,7 @@ const addNewWorkOrder = () => {
     address.value = ''
     phoneNumber.value = ''
     issue.value = ''
+    
 
         displayAllWorkOrders(res.data)
     })
@@ -86,14 +91,40 @@ const addNewWorkOrder = () => {
     })
 }
 const deleteWorkOrder = (id) => {
+
+
     axios.delete(`${baseURL}/deleteWorkOrder/${id}`)
+
     .then((res) => {
 
     displayExistingReq.innerHTML = ''
 
         displayAllWorkOrders(res.data)
 
+
+
     })
+
+    // const completedWorkOrder = () => {
+
+    //     // const name = document.querySelector('#nameInput')
+    //     // const address = document.querySelector('#addressInput')
+    //     // const phoneNumber = document.querySelector('#phoneInput')
+    //     // const issue = document.querySelector('#freeform')
+    
+    //     // let bodyObj = {
+    //     //     name: name.value,
+    //     //     address: address.value,
+    //     //     phoneNumber: phoneNumber.value,
+    //     //     issue: issue.value
+    //     // }
+
+    //     axios.post(`${baseURL}/closedWorkOrders/${id}`, bodyObj)
+    //     .then((res) => {
+    //         deleteWorkOrder.push(completedWorkOrder)
+    //     })
+    // }
+
 }
 
 // const getHomePage = () => {
@@ -112,7 +143,11 @@ const deleteWorkOrder = (id) => {
 
 addWork.addEventListener('click', addNewWorkOrder)
 
+
 getAllWorkOrders()
+// completedWorkOrder()
+// getAllWorkOrders.push(deleteWorkOrder)
+
 
 //Get the information
 //add new information

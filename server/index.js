@@ -11,6 +11,7 @@ app.use(cors())
 
 //Endpoint - destructure the get work orders
 const {getWorkOrder, addWorkOrder, deleteWorkOrder} = require('./controller')
+// const {closedWorkOrders} = require('./closedWorkOrders')
 
 // const{getHomePage} = require('./homepage.html')
 
@@ -20,7 +21,7 @@ app.get('/workOrders', getWorkOrder)
 app.post('/addWorkOrder', addWorkOrder)
 app.delete('/deleteWorkOrder/:id', deleteWorkOrder)
 // app.put('/updateWorkOrder', updateWorkOrder)
-// app.get('/homepage', getHomePage)
+// app.post('/closedWorkOrders/:id', closedWorkOrders)
 
 app.listen(5000, () => console.log(`docked and loaded on 5000`))
 

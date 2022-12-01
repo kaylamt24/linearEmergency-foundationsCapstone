@@ -4,6 +4,7 @@
         "name": "Garrett Fitzgerald",
         "address": "324 Deer Rd. San Antonio TX, 78217",
         "phoneNumber": "314-555-7824",
+        "open": false,
         "issue": "Generator is not working. The weekly test did not run and now the service light is blinking. He is not sure when the last time the battery was replaced. Take a battery just incase."
     },
     
@@ -12,6 +13,7 @@
         "name": "Debbie Orton",
         "address": "1300 Carolbeth Rd. San Antonio TX, 78217",
         "phoneNumber": "573-555-9207",
+        "open": true,
         "issue": "No heat. The blower kicks on but the furnace is only blowing room temperature air. She would like for us to replace the air filter while we are there, size unknown."
     },
 
@@ -20,6 +22,7 @@
         "name": "Heather Gibson",
         "address": "2424 Evans Rd. San Antonio TX, 78217",
         "phoneNumber": "816-555-7029",
+        "open": true,
         "issue": "No cool. The condenser hums when you turn it off and on at the thermostat. If you go out and manually start the condenser blades, it will run and cool. Possible bad capacitor."
     },
 
@@ -28,6 +31,7 @@
         "name": "Travis Mountain",
         "address": "1800 Military Drive NW. San Antonio TX, 78217",
         "phoneNumber": "217-555-2843",
+        "open": true,
         "issue": "Perform Preventative Maintenance on the furnace. Filter size is a fiberglass 16X25X1 and is included in the cost of the maintenance. Customer to pay cash upon arrival."
     },
 
@@ -36,6 +40,7 @@
         "name": "David Trevino",
         "address": "1435 Austin Hwy. San Antonio TX, 78217",
         "phoneNumber": "210-555-9827",
+        "open": true,
         "issue": "Customer has a heat pump and the outdoor unit is frozen. Defrost mode did not kick on and run. Possible defrost timer broken and not kicking on at determined intervals or too much ice build up that it cannot defrost on its own. Check for refrigerant leaks if defrost timer is fully functional"
 
     },  
@@ -45,6 +50,7 @@
         "name": "Brittany More",
         "address": "2066 County Rd. 405 San Antonio TX, 78217",
         "phoneNumber": "309-555-9827",
+        "open": true,
         "issue": "No heat. Thermostat is blank. Check if batteries are dead or if it is hardwired to power. Customer had issues with the door switch not engaging. Replace filter while there. Honeywell 20X25X5 MERV 11 filter."
     },
     
@@ -53,6 +59,7 @@
         "name": "Kim Montemeyer",
         "address": "815 Fourwinds Dr. San Antonio TX, 78217",
         "phoneNumber": "210-555-9827",
+        "open": true,
         "issue": "Carrier Infinity thermostat is offline and customer is out of town. Key is under the doormat at the side door. Call customer at number om file to approve repairs before completing."
     }
 ]
