@@ -1,9 +1,8 @@
 const workOrders = require('./db.json')
-// const closed = require('./closedWorkOrders.json')
 
-// const getHomePage = require('./homepage.html')
 
-let globalId = 8;
+let globalId = 13;
+
 
 module.exports = {
     getWorkOrder: (req, res) => {
@@ -34,7 +33,7 @@ module.exports = {
 
     deleteWorkOrder: (req, res) => {
         const index = workOrders.findIndex((el) => el.id === +req.params.id)
-        // you have index of thing you want to delete
+        // have index of thing you want to delete
         // instead of deleting, set property "open" to false
 
         workOrders[index]["open"] = false

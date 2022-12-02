@@ -33,14 +33,14 @@
     justify-content: space-around;
     display: inline-block;
     text-align: inline; 
-    cursor: pointer;
+    cursor: default;
   }
   nav li a {
     color: white;
     font-size: 2.1vh;
     text-decoration: none;
-    font-family: 'Merriweather Sans', sans-serif;
-    cursor: pointer;
+    font-family: 'Questrial', sans-serif;
+    cursor: default;
   }
     nav li a::after{
         content: '';
@@ -51,7 +51,7 @@
         left: 0;
         bottom: 2%;
         transition: 0.4s;
-        cursor: pointer;
+        cursor: default;
     
     }
     nav li a:hover::after{

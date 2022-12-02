@@ -4,11 +4,11 @@
         "id": 1,
         "firstName": "Garrett",
         "lastName": "Fitzgerald",
-        "streetAddress": "324 Deer Rd.",
+        "streetAddress": "8727 Perrin Beitel",
         "city": "San Antonio",
         "state": "Texas",
         "zipcode": "78217",
-        "phoneNumber": "314-555-7824",
+        "phoneNumber": "210-591-0642",
         "open": true,
         "issue": "Generator is not working. The weekly test did not run and now the service light is blinking. He is not sure when the last time the battery was replaced. Take a battery just incase."
     },
@@ -17,37 +17,37 @@
         "id": 2,
         "firstName": "Debbie",
         "lastName": "Orton",
-        "streetAddress": "1300 Carolbeth",
+        "streetAddress": "5318 W. Walzem Rd.",
         "city": "San Antonio",
         "state": "Texas",
-        "zipcode": "78217",
-        "phoneNumber": "309-833-2852",
+        "zipcode": "78218",
+        "phoneNumber": "210-616-2519",
         "open": true,
-        "issue": "No heat. The blower kicks on but the furnace is only blowing room temperature air. She would like for us to replace the air filter while we are there, size unknown.."
+        "issue": "No heat. The blower kicks on but the furnace is only blowing room temperature air. She would like for us to replace the air filter while we are there, size unknown."
     },
 
     {
         "id": 3,
         "firstName": "Heather",
         "lastName": "Gibson",
-        "streetAddress": "2424 Evans Rd.",
+        "streetAddress": "4714 Rittiman Rd.",
         "city": "San Antonio",
         "state": "Texas",
-        "zipcode": "78217",
-        "phoneNumber": "816-555-7029",
-        "open": true,
+        "zipcode": "78218",
+        "phoneNumber": "210-666-2636",
+        "open": false,
         "issue": "No cool. The condenser hums when you turn it off and on at the thermostat. If you go out and manually start the condenser blades, it will run and cool. Possible bad capacitor."
     },
 
     {
         "id": 4,
-        "firstName": "Travis",
-        "lastName": "Mountain",
-        "streetAddress": "1800 Military Dr. NW",
+        "firstName": "Raymond",
+        "lastName": "Zapata",
+        "streetAddress": "2907 Thousand Oaks Dr.",
         "city": "San Antonio",
         "state": "Texas",
-        "zipcode": "78217",
-        "phoneNumber": "217-555-2843",
+        "zipcode": "78247",
+        "phoneNumber": "210-591-0621",
         "open": true,
         "issue": "Perform Preventative Maintenance on the furnace. Filter size is a fiberglass 16X25X1 and is included in the cost of the maintenance. Customer to pay cash upon arrival."
     },
@@ -56,11 +56,11 @@
         "id": 5,
         "firstName": "Brittany",
         "lastName": "More",
-        "streetAddress": "2066 County Rd. 405",
-        "city": "San Antonio",
+        "streetAddress": "8630 Farm-To-Market Rd 78",
+        "city": "Converse",
         "state": "Texas",
-        "zipcode": "78217",
-        "phoneNumber": "309-555-1234",
+        "zipcode": "78109",
+        "phoneNumber": "210-661-6079",
         "open": true,
         "issue": "No heat. Thermostat is blank. Check if batteries are dead or if it is hardwired to power. Customer had issues with the door switch not engaging. Replace filter while there. Honeywell 20X25X5 MERV 11 filter."
 
@@ -68,27 +68,89 @@
 
     {
         "id": 6,
-        "firstName": "David",
-        "lastName": "Trevino",
-        "streetAddress": "1435 Austin Hwy",
-        "city": "San Antonio",
+        "firstName": "Orlando",
+        "lastName": "Leckie",
+        "streetAddress": "17397 I-35 N",
+        "city": "Schertz",
         "state": "Texas",
-        "zipcode": "78217",
-        "phoneNumber": "210-555-9827",
+        "zipcode": "78154",
+        "phoneNumber": "210-591-0623",
         "open": true,
         "issue": "Customer has a heat pump and the outdoor unit is frozen. Defrost mode did not kick on and run. Possible defrost timer broken and not kicking on at determined intervals or too much ice build up that it cannot defrost on its own. Check for refrigerant leaks if defrost timer is fully functional."
     },
     
     {
          "id": 7,
-         "firstName": "Kim",
-         "lastName": "Montemeyer",
-         "streetAddress": "815 Fourwinds D.",
+         "firstName": "Willie",
+         "lastName": "Armendariz",
+         "streetAddress": "7323 N Loop 1604 W Access Rd.",
          "city": "San Antonio",
          "state": "Texas",
-        "zipcode": "78217",
-         "phoneNumber": "210-555-7894",
+        "zipcode": "78249",
+         "phoneNumber": "210-372-9757",
          "open": true,
-         "issue": "Generator is not working. The weekly test did not run and now the service light is blinking. He is not sure when the last time the battery was replaced. Take a battery just incase."
+         "issue": "No heat. Thermostat is blank. Check if batteries are dead or if it is hardwired to power. Customer had issues with the door switch not engaging. Replace filter while there. Honeywell 20X25X5 MERV 11 filter."
+    },
+    {
+        "id": 8,
+        "firstName": "James",
+        "lastName": "Rowland",
+        "streetAddress": "5211 De Zavala Rd.",
+        "city": "San Antonio",
+        "state": "Texas",
+       "zipcode": "78249",
+        "phoneNumber": "210-591-0696",
+        "open": true,
+        "issue": "Customer has a heat pump and the outdoor unit is frozen. Defrost mode did not kick on and run. Possible defrost timer broken and not kicking on at determined intervals or too much ice build up that it cannot defrost on its own. Check for refrigerant leaks if defrost timer is fully functional."
+   },
+   {
+         "id": 9,
+         "firstName": "Ana",
+         "lastName": "Salazar",
+         "streetAddress": "11238 Potranco Rd.",
+        "city": "San Antonio",
+        "state": "Texas",
+        "zipcode": "78253",
+        "phoneNumber": "210-679-0121",
+        "open": true,
+        "issue": "Perform Preventative Maintenance on the furnace. Filter size is a fiberglass 16X25X1 and is included in the cost of the maintenance.." 
+    },
+    {
+        "id": 10,
+        "firstName": "Jaime",
+        "lastName": "Villafuerte",
+        "streetAddress": "12360 Leslie Rd. ",
+         "city": "Helotes",
+         "state": "Texas",
+        "zipcode": "78023",
+        "phoneNumber": "210-695-9105",
+         "open": true,
+        "issue": "No heat. The blower kicks on but the furnace is only blowing room temperature air. She would like for us to replace the air filter while we are there, size unknown."
+    },
+    {
+        "id": 11,
+        "firstName": "Monica",
+        "lastName": "Bartley",
+        "streetAddress": "14076 Nacogdoches Rd.",
+         "city": "San Antonio",
+         "state": "Texas",
+        "zipcode": "78247",
+        "phoneNumber": "210-653-8814",
+         "open": true,
+        "issue": "Generator kicked on due to black out last night and only half of the house had power. Check connections for the North end of the house. Customer requested we service the generator as well. We installed generator 04/2020. Generac Guardian 24kW on LP. Model #7210"
+    },
+    {
+        "id": 12,
+        "firstName": "Candace",
+        "lastName": "Mountain",
+        "streetAddress": "2110 Goliad Rd.",
+         "city": "San Antonio",
+         "state": "Texas",
+        "zipcode": "78223",
+        "phoneNumber": "210-591-0699",
+         "open": true,
+        "issue": "Generator is not working. The weekly test did not run and now the service light is blinking. He is not sure when the last time the battery was replaced. Take a battery just incase."
     }
+    
+    
 ]

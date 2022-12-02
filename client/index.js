@@ -14,7 +14,7 @@ const createWorkOrders = (workOrder) => {
     createNewWorkOrder.classList.add('new-workorder')
 
     createNewWorkOrder.innerHTML = ` 
-    <p>${workOrder.firstName}</p>
+    <p>${workOrder.firstName}</p> 
     <p>${workOrder.lastName}</p>
     <p>${workOrder.streetAddress}</p>
     <p>${workOrder.city}</p>
@@ -27,9 +27,10 @@ const createWorkOrders = (workOrder) => {
     <select name ="options" id="status">
     <option value ="change">Open Work Order</option>
     <option value ="closed">Work Order Completed</option>
+    
     </select>
-    </section>
     <button onclick="deleteWorkOrder(${workOrder.id})">Submit</button>
+    </section>
   `
 
     displayExistingReq.appendChild(createNewWorkOrder)
@@ -86,6 +87,7 @@ const addNewWorkOrder = () => {
     console.log(bodyObj)
 
     axios.post(`${baseURL}/addWorkOrder`, bodyObj)
+    
 
     .then((res) => {
         
@@ -105,6 +107,9 @@ const addNewWorkOrder = () => {
         console.log(err)
     })
 }
+
+
+
 const deleteWorkOrder = (id) => {
 
 
@@ -115,53 +120,17 @@ const deleteWorkOrder = (id) => {
     displayExistingReq.innerHTML = ''
 
         displayAllWorkOrders(res.data)
-
-
-
+        alert('Work Order Completed!')
     })
 
-    // const completedWorkOrder = () => {
-
-    //     // const name = document.querySelector('#nameInput')
-    //     // const address = document.querySelector('#addressInput')
-    //     // const phoneNumber = document.querySelector('#phoneInput')
-    //     // const issue = document.querySelector('#freeform')
-    
-    //     // let bodyObj = {
-    //     //     name: name.value,
-    //     //     address: address.value,
-    //     //     phoneNumber: phoneNumber.value,
-    //     //     issue: issue.value
-    //     // }
-
-    //     axios.post(`${baseURL}/closedWorkOrders/${id}`, bodyObj)
-    //     .then((res) => {
-    //         deleteWorkOrder.push(completedWorkOrder)
-    //     })
-    // }
 
 }
-
-// const getHomePage = () => {
-//     axios.get(`${baseURL}/getHomePage`)
-//     .then((res) => {
-//         // console.log(res.data)
-//         displayAllWorkOrders(res.data)
-//     })
-//     .catch((err) => {
-//         console.log(err)
-//     })
-
-// }
-
-
 
 addWork.addEventListener('click', addNewWorkOrder)
 
 
 getAllWorkOrders()
-// completedWorkOrder()
-// getAllWorkOrders.push(deleteWorkOrder)
+
 
 
 //Get the information
@@ -172,5 +141,5 @@ getAllWorkOrders()
 
 // 1.) I would like for the new request to be in the New work order screen and then move to the open work orders screen
 
-// 2.) When a work order is deleted, it goes into the deleted work orders screen.
+// 2.) When a work order is deleted, it goes into the closed work orders screen.
 

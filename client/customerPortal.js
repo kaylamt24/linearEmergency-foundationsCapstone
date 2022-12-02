@@ -1,0 +1,64 @@
+const baseURL = "http://localhost:5000"
+
+// Select the element
+// Write the function
+// Add event listener
+
+const addWork = document.querySelector('#addWorkOrder')
+const displayExistingReq = document.querySelector('#workOrderDisplay')
+
+
+const addNewWorkOrder = () => {
+
+    displayExistingReq.innerHTML = ''
+
+    const firstName = document.querySelector('#firstNameInput')
+    const lastName = document.querySelector('#lastNameInput')
+    const streetAddress = document.querySelector('#streetAddressInput')
+    const city = document.querySelector('#cityInput')
+    const state = document.querySelector('#stateInput')
+    const zipcode = document.querySelector('#zipcodeInput')
+    const phoneNumber = document.querySelector('#phoneInput')
+    const issue = document.querySelector('#freeform')
+
+    let bodyObj = {
+        firstName: firstName.value,
+        lastName: lastName.value,
+        streetAddress: streetAddress.value,
+        city: city.value,
+        state: state.value,
+        zipcode: zipcode.value,
+        phoneNumber: phoneNumber.value,
+        issue: issue.value,
+        open: true
+    }
+
+    console.log(bodyObj)
+
+    axios.post(`${baseURL}/addWorkOrder`, bodyObj)
+
+    .then((res) => {
+        
+        firstName.value = ''
+        lastName.value = ''
+        streetAddress.value = ''
+        city.value = ''
+        state.value = ''
+        zipcode.value = ''
+        phoneNumber.value = ''
+        issue.value = ''
+
+
+        displayThisWorkOrder(res.data)
+    })
+    .catch((err) => {
+        console.log(err)
+    })
+    alert('Thank you for choosing Linear Emergency! Your request has been received and we will be in contact with you as soon as possible!')
+}
+
+// addWork.addEventListener('click', addNewWorkOrder)
+
+document.getElementById("addWorkOrder").addEventListener('click', addNewWorkOrder)
+
+
