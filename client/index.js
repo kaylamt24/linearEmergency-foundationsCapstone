@@ -120,7 +120,7 @@ const deleteWorkOrder = (id) => {
     displayExistingReq.innerHTML = ''
 
         displayAllWorkOrders(res.data)
-        alert('Work Order Completed!')
+      
     })
 
 

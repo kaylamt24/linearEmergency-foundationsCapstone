@@ -48,17 +48,26 @@ const addNewWorkOrder = () => {
         phoneNumber.value = ''
         issue.value = ''
 
-
-        displayThisWorkOrder(res.data)
     })
     .catch((err) => {
         console.log(err)
     })
-    alert('Thank you for choosing Linear Emergency! Your request has been received and we will be in contact with you as soon as possible!')
 }
 
-// addWork.addEventListener('click', addNewWorkOrder)
+addWork.addEventListener('click', addNewWorkOrder)
 
-document.getElementById("addWorkOrder").addEventListener('click', addNewWorkOrder)
+// document.getElementById("addWorkOrder").addEventListener('click', addNewWorkOrder)
+
+
+let button = document.getElementById("addWorkOrder")
+
+button.addEventListener('click', function(){
+    if (button.click = true){
+       window.location.href="./customerPortalExit.html"
+    } else {
+        console.log('did not work')
+    }
+})
+
 
 
