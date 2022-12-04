@@ -14,14 +14,20 @@ const createWorkOrders = (workOrder) => {
     createNewWorkOrder.classList.add('new-workorder')
 
     createNewWorkOrder.innerHTML = ` 
-    <p>${workOrder.firstName}</p>
-    <p>${workOrder.lastName}</p>
-    <p>${workOrder.streetAddress}</p>
-    <p>${workOrder.city}</p>
-    <p>${workOrder.state}</p>
-    <p>${workOrder.zipcode}</p>
+    <p1>${workOrder.firstName} ${workOrder.lastName} </p1>
+    <p>${workOrder.streetAddress} ${workOrder.city} ${workOrder.state}, ${workOrder.zipcode}</p>
     <p>${workOrder.phoneNumber}</p>
+    <p2>Reason for call</p2>
     <p>${workOrder.issue}</p>
+
+    <section>
+    <select name ="options" id="status">
+    <option value ="change">Closed Work Order</option>
+    <option value ="closed">Open Work Order</option>
+    
+    </select>
+    <button onclick="deleteWorkOrder(${workOrder.id})">Submit</button>
+    </section>
   `
 
     displayExistingReq.appendChild(createNewWorkOrder)
@@ -51,4 +57,20 @@ const getAllClosedlWorkOrders = () => {
 
 }
 
+// const updateWorkOrder = () => {
+//     axios.push(`${baseURL}/workOrders`)
+//     .then((res) => {
+//         // console.log(res.data)
+//         displayAllClosedWorkOrders(res.data)
+//     })
+//     .catch((err) => {
+//         console.log(err)
+//     })
+
+// }
+
 getAllClosedlWorkOrders()
+
+
+
+

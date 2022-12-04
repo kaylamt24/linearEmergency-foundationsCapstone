@@ -18,10 +18,10 @@ const {getWorkOrder, addWorkOrder, deleteWorkOrder} = require('./controller')
 app.get('/workOrders', getWorkOrder)
 app.post('/addWorkOrder', addWorkOrder)
 app.delete('/deleteWorkOrder/:id', deleteWorkOrder)
-// app.put('/updateWorkOrder', updateWorkOrder)
+// app.put('/updateWorkOrder/:id', updateWorkOrder)
 
 
-app.listen(5000, () => console.log(`docked and loaded on 5000`))
+app.listen(5000, () => console.log(`Linear Emergency running on 5000`))
 
 
 
