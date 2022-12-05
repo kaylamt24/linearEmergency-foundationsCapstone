@@ -64,10 +64,34 @@ module.exports = {
     }, 
 
     deleteWorkOrder: async (req, res) => {
-        const index = workOrders.findIndex((el) => el.id === +req.params.id)
+        const queryString2 = "SELECT * FROM db"
+        const results2 = await query(queryString2)
+        const workOrdersRawData = results2.rows
+        const changeName = (workOrdersRawData) => {
+          const newArray =   workOrdersRawData.map((workOrder) => {
+                return {
+                    id: workOrder.id,
+                    firstName: workOrder.firstname, 
+                    lastName: workOrder.lastname,
+                    streetAddress: workOrder.streetaddress,
+                    city: workOrder.city,
+                    state: workOrder.state,
+                    zipcode: workOrder.zipcode,
+                    phoneNumber: workOrder.phonenumber,
+                    issue: workOrder.issue,
+                    open: workOrder.open
+                }
+            })
+            return newArray
+        }
+        const workOrders = changeName(workOrdersRawData)
+console.log(req.params.id)
+console.log(workOrders)
+        const index = workOrders.findIndex((el) => el.id == +req.params.id)
+        
         // have index of thing you want to delete
         // instead of deleting, set property "open" to false
-
+        console.log(index)
         workOrders[index]["open"] = false
 
         const queryString = `UPDATE db SET open=FALSE where id = '${req.params.id}'`

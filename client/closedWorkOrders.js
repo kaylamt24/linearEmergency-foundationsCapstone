@@ -33,17 +33,17 @@ const createWorkOrders = (workOrder) => {
     displayExistingReq.appendChild(createNewWorkOrder)
 }
 
-const updateWorkOrder = (x) => {
-    console.log('delete work order', x)
-    // put request 
-    axios.put(`${$baseURL}/workOrders`)
-        if(arr[i].open === true)
-            // .then((res) => {
-                createWorkOrders(res.data)
-//             })
-//     // change open field fto ture
+// const updateWorkOrder = (x) => {
+//     console.log('delete work order', x)
+//     // put request 
+//     axios.put(`${$baseURL}/workOrders`)
+//         if(arr[i].open === true)
+//             // .then((res) => {
+//                 createWorkOrders(res.data)
+// //             })
+// //     // change open field fto ture
 
- }
+ 
 
 const displayAllClosedWorkOrders = (arr) => {
     for(let i = 0; i < arr.length; i++){
