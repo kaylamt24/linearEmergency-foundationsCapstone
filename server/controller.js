@@ -13,6 +13,7 @@ module.exports = {
         const changeName = (workOrdersRawData) => {
           const newArray =   workOrdersRawData.map((workOrder) => {
                 return {
+                    id: workOrder.id,
                     firstName: workOrder.firstname, 
                     lastName: workOrder.lastname,
                     streetAddress: workOrder.streetaddress,
@@ -27,29 +28,28 @@ module.exports = {
             return newArray
         }
         const workOrders = changeName(workOrdersRawData)
-        console.log('workOrders', workOrders)
         res.status(200).send(workOrders)
     },
 
     addWorkOrder: async (req, res) => {
-    const {firstname, lastname, streetaddress, city, state, zipcode, phonenumber, issue} = req.body
+    const {firstName, lastName, streetAddress, city, state, zipcode, phoneNumber, issue} = req.body
         
     const newWorkOrder = {
         id: globalId,
-        firstname: firstname,
-        lastname: lastname,
-        streetaddress: streetaddress,
+        firstName: firstName,
+        lastName: lastName,
+        streetAddress: streetAddress,
         city: city,
         state: state,
         zipcode: zipcode,
-        phonenumber: phonenumber,
+        phoneNumber: phoneNumber,
         issue: issue,
         open: true
     }
-
+    console.log(newWorkOrder)
     // workOrders.push(newWorkOrder)
-    const queryString = `INSERT INTO db (firstName, lastName, streetAddress, city, state, zipcode, phoneNumber, issue, open)
-    VALUES (${newWorkOrder.firstname}, ${newWorkOrder.lastname}, ${newWorkOrder.streetaddress}, ${newWorkOrder.city}, ${newWorkOrder.state}, ${newWorkOrder.zipcode}, ${newWorkOrder.phonenumber}, ${newWorkOrder.issue}, ${newWorkOrder.open})`
+    const queryString = `INSERT INTO db (id, firstname, lastname, streetaddress, city, state, zipcode, phonenumber, issue, open)
+    VALUES ('${newWorkOrder.id}', '${newWorkOrder.firstName}', '${newWorkOrder.lastName}', '${newWorkOrder.streetAddress}', '${newWorkOrder.city}', '${newWorkOrder.state}', '${newWorkOrder.zipcode}', '${newWorkOrder.phoneNumber}', '${newWorkOrder.issue}', '${newWorkOrder.open}')`
 
    
     console.log(queryString)
@@ -63,12 +63,18 @@ module.exports = {
     res.status(200).send(workOrders)
     }, 
 
-    deleteWorkOrder: (req, res) => {
+    deleteWorkOrder: async (req, res) => {
         const index = workOrders.findIndex((el) => el.id === +req.params.id)
         // have index of thing you want to delete
         // instead of deleting, set property "open" to false
 
         workOrders[index]["open"] = false
+
+        const queryString = `UPDATE db SET open=FALSE where id = '${req.params.id}'`
+        console.log(queryString)
+
+        const results = await query(queryString)
+        console.log(results)
 
         res.status(200).send(workOrders)
     },
