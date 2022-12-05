@@ -86,26 +86,31 @@ nav li a {
     width: 20%;
 }
 
-.container {
+ .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   text-align: flex;
   border-radius: 10px 10px;
-  margin-left: 10px;
-  width: 55vw;
-  margin-top: 25px;
-  background-color: pink;
-  height: 100%;
 
+  width: 10vw;
+  margin-top: 10px;
+  height: 50px;
+  
+  
   }
-
-
-
-
-
-
-
+  .container .back-video {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: flex;
+  border-radius: 10px 10px;
+  margin-left: 200px;
+  height: 550px;
+  border-radius: 31px;
+  background: linear-gradient(145deg, #fbfcfc, #ebfdfd);
+  box-shadow:  6px 8px 28px rgb(25, 133, 161);
+  }
 
 
 
@@ -116,10 +121,10 @@ nav li a {
   text-align: flex;
   display: flex;
   flex-basis: auto;
-  width: 40vh;
+  width: 60vh;
   float: right;
   flex-wrap: wrap;
-  margin-right: 200px;
+  margin-right: 150px;
   margin-top: 10px;
   } 
 .new > section {
@@ -133,7 +138,7 @@ nav li a {
   padding-right: 5px;
   padding-top: 20px; /* above name */
   padding-bottom: 25px; /* below submit*/
-  width: 25vw;
+  width: 30vw;
   margin-bottom: 20px; /*between boxes*/
 }
 .new > section p {
@@ -260,18 +265,5 @@ float: right;
 padding-right: 10px;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  text-align: flex;
-  border-radius: 10px 10px;
-  margin-left: 10px;
-  width: 55vw;
-  margin-top: 25px;
-  background-color: pink;
-  height: 50px;
-  }
-  
   
   

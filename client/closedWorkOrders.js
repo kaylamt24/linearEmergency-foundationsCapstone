@@ -26,12 +26,24 @@ const createWorkOrders = (workOrder) => {
     <option value ="closed">Open Work Order</option>
     
     </select>
-    <button onclick="deleteWorkOrder(${workOrder.id})">Submit</button>
+    /* <button onclick="submitWorkOrder(${workOrder.id})">Submit</button> */
     </section>
   `
 
     displayExistingReq.appendChild(createNewWorkOrder)
 }
+
+const updateWorkOrder = (x) => {
+    console.log('delete work order', x)
+    // put request 
+    axios.put(`${$baseURL}/workOrders`)
+        if(arr[i].open === true)
+            // .then((res) => {
+                createWorkOrders(res.data)
+//             })
+//     // change open field fto ture
+
+ }
 
 const displayAllClosedWorkOrders = (arr) => {
     for(let i = 0; i < arr.length; i++){
@@ -72,5 +84,4 @@ const getAllClosedlWorkOrders = () => {
 getAllClosedlWorkOrders()
 
 
-
-
+document.getElementById("addWorkOrder").addEventListener('click', addNewWorkOrder)
