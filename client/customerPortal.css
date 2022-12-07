@@ -85,7 +85,16 @@ nav li a {
 .open:hover::after {
     width: 20%;
 }
-
+p {
+  font-family: 'Questrial', sans-serif;
+  text-align: center;
+  font-size: 25px;
+  padding-left: 55px;
+  padding-right: 55px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  
+}
  .container {
   display: flex;
   flex-direction: row;
@@ -93,27 +102,23 @@ nav li a {
   text-align: flex;
   border-radius: 10px 10px;
 
-  width: 10vw;
+  width: 7vw;
   margin-top: 10px;
   height: 50px;
-  
-  
-  }
+}
   .container .back-video {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   text-align: flex;
   border-radius: 10px 10px;
-  margin-left: 200px;
-  height: 550px;
+  margin-left: 280px;
+  height: 675px;
   border-radius: 31px;
+  margin-top: 10px;
   background: linear-gradient(145deg, #fbfcfc, #ebfdfd);
   box-shadow:  6px 8px 28px rgb(25, 133, 161);
-  }
-
-
-
+}
 .new {
   display: flex;
   flex-direction: row-reverse;
@@ -121,12 +126,12 @@ nav li a {
   text-align: flex;
   display: flex;
   flex-basis: auto;
-  width: 60vh;
+  width: 50vh;
   float: right;
   flex-wrap: wrap;
   margin-right: 150px;
   margin-top: 10px;
-  } 
+} 
 .new > section {
   flex-direction: row-reverse;
   flex-basis: auto;
@@ -188,25 +193,6 @@ background-color: rgb(255, 253, 253);
   margin-top: 10px;
 
 }
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #workOrderDisplay .new-workorder {
 border-radius: 31px;

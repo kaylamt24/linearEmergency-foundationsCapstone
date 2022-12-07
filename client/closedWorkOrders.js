@@ -1,12 +1,8 @@
 const baseURL = "http://localhost:5000"
 
-// Select the element
-// Write the function
-// Add event listener
 
 const addWork = document.querySelector('#addWorkOrder')
 const displayExistingReq = document.querySelector('#workOrderDisplay')
-
 
 
 const createWorkOrders = (workOrder) => {
@@ -20,47 +16,26 @@ const createWorkOrders = (workOrder) => {
     <p2>Reason for call</p2>
     <p>${workOrder.issue}</p>
 
-    <section>
-    <select name ="options" id="status">
-    <option value ="change">Closed Work Order</option>
-    <option value ="closed">Open Work Order</option>
-    
-    </select>
-    /* <button onclick="submitWorkOrder(${workOrder.id})">Submit</button> */
-    </section>
   `
-
     displayExistingReq.appendChild(createNewWorkOrder)
 }
 
-// const updateWorkOrder = (x) => {
-//     console.log('delete work order', x)
-//     // put request 
-//     axios.put(`${$baseURL}/workOrders`)
-//         if(arr[i].open === true)
-//             // .then((res) => {
-//                 createWorkOrders(res.data)
-// //             })
-// //     // change open field fto ture
-
- 
 
 const displayAllClosedWorkOrders = (arr) => {
     for(let i = 0; i < arr.length; i++){
-        // console.log(arr[i])
+        console.log(arr[i])
         console.log(arr[i])
         if (arr[i].open === false){
             console.log('found false')
             createWorkOrders(arr[i])
         }
-        // createWorkOrders(arr[i])
     }
 }
 
 const getAllClosedlWorkOrders = () => {
     axios.get(`${baseURL}/workOrders`)
     .then((res) => {
-        // console.log(res.data)
+        console.log(res.data)
         displayAllClosedWorkOrders(res.data)
     })
     .catch((err) => {
@@ -69,19 +44,8 @@ const getAllClosedlWorkOrders = () => {
 
 }
 
-// const updateWorkOrder = () => {
-//     axios.push(`${baseURL}/workOrders`)
-//     .then((res) => {
-//         // console.log(res.data)
-//         displayAllClosedWorkOrders(res.data)
-//     })
-//     .catch((err) => {
-//         console.log(err)
-//     })
-
-// }
 
 getAllClosedlWorkOrders()
 
 
-document.getElementById("addWorkOrder").addEventListener('click', addNewWorkOrder)
+

@@ -7,7 +7,7 @@ let globalId = 13;
 
 module.exports = {
     getWorkOrder: async (req, res) => {
-        const queryString = "SELECT * FROM db"
+        const queryString = "SELECT * FROM db ORDER BY id asc"
         const results = await query(queryString)
         const workOrdersRawData = results.rows
         const changeName = (workOrdersRawData) => {
@@ -29,6 +29,7 @@ module.exports = {
         }
         const workOrders = changeName(workOrdersRawData)
         res.status(200).send(workOrders)
+       
     },
 
     addWorkOrder: async (req, res) => {
@@ -89,8 +90,7 @@ console.log(req.params.id)
 console.log(workOrders)
         const index = workOrders.findIndex((el) => el.id == +req.params.id)
         
-        // have index of thing you want to delete
-        // instead of deleting, set property "open" to false
+     
         console.log(index)
         workOrders[index]["open"] = false
 
@@ -101,20 +101,8 @@ console.log(workOrders)
         console.log(results)
 
         res.status(200).send(workOrders)
+       
     },
-
-
-    // updateWorkOrder: (req, res) => {
-    //     const index = workOrders.findIndex((el) => el.id === +req.params.id)
-
-    //     workOrders[index]["open"] = true
-
-    //     res.status(200).send(workOrders)
-    //     // request will have info like work order id, and fields to change
-    //     // get the work order to change
-    //     // change it
-    //     // then add it back to work orders
-    
   
 }
 

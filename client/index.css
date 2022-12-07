@@ -70,7 +70,7 @@ nav li {
     padding-top: 20px;
     cursor: default;
     }
-    .open::after {
+     .open::after {
       content: '';
       height: 3px;
       width: 0;
@@ -82,7 +82,7 @@ nav li {
       transition: 0.4s;
   
   }
-  .open:hover::after {
+   .open:hover::after {
       width: 20%;
   }
 
@@ -229,4 +229,11 @@ margin-top: 25px;
 #workOrderDisplay section {
   float: right;
   padding-right: 10px;
+}
+footer {
+  padding-right: 40px;
+  float: right;
+  font-family: 'Questrial', sans-serif;
+  margin-top: 10px;
+  font-size: 15px;
 }

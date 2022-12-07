@@ -1,8 +1,5 @@
 const baseURL = "http://localhost:5000"
 
-// Select the element
-// Write the function
-// Add event listener
 
 const addWork = document.querySelector('#addWorkOrder')
 const displayExistingReq = document.querySelector('#workOrderDisplay')
@@ -55,8 +52,6 @@ const addNewWorkOrder = () => {
 }
 
 addWork.addEventListener('click', addNewWorkOrder)
-
-// document.getElementById("addWorkOrder").addEventListener('click', addNewWorkOrder)
 
 
 let button = document.getElementById("addWorkOrder")

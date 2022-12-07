@@ -1,8 +1,5 @@
 const baseURL = "http://localhost:5000"
 
-// Select the element
-// Write the function
-// Add event listener
 
 const addWork = document.querySelector('#addWorkOrder')
 const displayExistingReq = document.querySelector('#workOrderDisplay')
@@ -35,18 +32,18 @@ const createWorkOrders = (workOrder) => {
 
 const displayAllWorkOrders = (arr) => {
     for(let i = 0; i < arr.length; i++){
-        // console.log(arr[i])
+        console.log(arr[i])
         if (arr[i].open){
             createWorkOrders(arr[i])
         }
-        // createWorkOrders(arr[i])
+    
     }
 }
 
 const getAllWorkOrders = () => {
     axios.get(`${baseURL}/workOrders`)
     .then((res) => {
-        // console.log(res.data)
+        console.log(res.data)
         displayAllWorkOrders(res.data)
     })
     .catch((err) => {
@@ -130,13 +127,4 @@ getAllWorkOrders()
 
 
 
-//Get the information
-//add new information
-//delete the new information
-
-//Everything is working on one single screen. At this point, I need to do a few different things. 
-
-// 1.) I would like for the new request to be in the New work order screen and then move to the open work orders screen
-
-// 2.) When a work order is deleted, it goes into the closed work orders screen.
 
