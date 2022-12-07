@@ -61,7 +61,7 @@ button.addEventListener('click', function(){
     if (button.click = true){
        window.location.href="./customerPortalExit.html"
     } else {
-        console.log('You done messed up girl')
+        console.log('redirect error')
     } 
 })
 
