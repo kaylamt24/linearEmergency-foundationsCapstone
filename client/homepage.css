@@ -66,13 +66,23 @@
   }
   @media (min-aspect-ratio: 16/9){
     .back-video{
-      width: auto;
+      width: 100%;
       height: auto;
     }
   }
   @media (max-aspect-ratio: 16/9){
     .back-video{
       width: auto;
-      height: auto;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 767px){
+    .back-video {
+      display: none;
+    }
+    body {
+      background: url('https://lh3.googleusercontent.com/o9fd1VQFFaQnf8gClRK3PDud6l8nAn119prPAGOO3PatjyCgMuOY2_LLiDrq99hMpXI08NhUiMhnA6jaj7ETkmKK7w_SB9ts0t32YLuiuf-XYlim3jjohQ8Gvhbaho5wJF2cgeO8YZk=w2400');
+      background-size: cover;
     }
   }
