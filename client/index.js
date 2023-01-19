@@ -66,6 +66,15 @@ const addNewWorkOrder = () => {
     const phoneNumber = document.querySelector('#phoneInput')
     const issue = document.querySelector('#freeform')
 
+    const phone = phoneNumber.value;
+    phoneNumber.value = phone.replace(/[^\d]/g, '');
+    if (phone.length > 3 && phone.length <= 6) {
+        phoneNumber.value = phone.slice(0, 3) + "-" + phone.slice(3);
+    }
+    else if (phone.length > 6) {
+        phoneNumber.value = phone.slice(0, 3) + "-" + phone.slice(3, 6) + "-" + phone.slice(6);
+    }
+
     let bodyObj = {
         firstName: firstName.value,
         lastName: lastName.value,
